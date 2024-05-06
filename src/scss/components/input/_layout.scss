@@ -1,0 +1,23 @@
+.hzd\:app-layout\:drawer\:content\:data-filter {
+    @extend .k-d-flex;
+    @extend .k-flex-col;
+    @extend .k-flex-1;
+    @extend .k-pb-2;
+    @extend .k-h-full;
+
+    .k-textarea {
+        @extend .\!k-rounded-tr-0;
+        @extend .\!k-rounded-br-0;
+
+        textarea {
+            @extend .k-font-size-md;
+            @extend .k-py-0;
+            @extend .k-px-0;
+            @extend .k-resize-none;
+
+            &:focus {
+                border: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,311 @@
+:root {
+    --kendo-letter-spacing: #{k-map-get( $kendo-spacing, 1px )};
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html,
+:host {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  -webkit-tap-highlight-color: transparent;
+  hanging-punctuation: first last;
+}
+
+@layer {
+    :root {
+        --kendo-font-size: 100% !important;
+        font-size: 100% !important;
+    }
+
+    body {
+        font-size: 1rem !important;
+    }
+}
+
+html, body {
+    height: 100%;
+    scrollbar-color: k-map-get( $kendo-palette-gray, 10 ) k-map-get( $kendo-palette-gray, 4 );
+}
+
+body {
+    margin: 0;
+    line-height: inherit;
+}
+
+hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+}
+
+abbr:where([title]) {
+    text-decoration: underline dotted;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+p,
+li {
+    max-width: 65ch;
+    text-wrap: pretty;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: theme('fontFamily.mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace); /* 1 */
+  font-size: 1em;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+    background-color: transparent;
+    background-image: none;
+}
+
+:-moz-ui-invalid {
+    box-shadow: none;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type='search'] {
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+summary {
+    display: list-item;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+    margin: 0;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    padding:.125rem
+}
+
+ol,
+ul,
+menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+dialog {
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    opacity: 1;
+    color: k-map-get($kendo-palette-gray, 8);
+}
+
+button,
+[role="button"] {
+    cursor: pointer;
+}
+
+:disabled {
+    cursor: default;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    vertical-align: middle;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+[hidden] {
+    display: none;
+}
+
+/* NOTE: Sonderklassen mit "::" vetragen sich nicht mit @extend */
+::-ms-reveal {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: var(--kendo-scrollbar-width);
+    height: var(--kendo-scrollbar-height);
+}
+
+::-webkit-scrollbar-track {
+    background-color: k-map-get( $kendo-palette-gray, 5 );
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hzd-hex-to-rgba(k-map-get( $kendo-palette-gray, 8 ), .4);
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: k-map-get( $kendo-palette-gray, 8 );
+}
+
+:has(:target) {
+    scroll-padding-top: 3rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :has(:target) {
+        scroll-behavior: smooth;
+    }
+}
+
+select, textarea, input, button {
+    font: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+}
+
+fieldset {
+    margin: 8px;
+    border: 1px solid k-map-get( $kendo-palette-gray, 5 );
+    padding: 8px;
+    border-radius: 4px;
+}
+
+h1:focus {
+    outline: none;
+}

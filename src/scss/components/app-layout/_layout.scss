@@ -1,0 +1,32 @@
+.hzd\:app-layout\:inner {
+    column-gap: 1em;
+    display: grid;
+    grid-template-columns: 20fr 80fr;
+    grid-template-rows: fit-content(70px) fit-content(70px) 1fr 0.5em;
+    height: 100%;
+    row-gap: 1em;
+}
+
+.hzd\:app-layout\:drawer\:content {
+    @extend .k-d-flex;
+    @extend .k-h-full;
+}
+
+.hzd\:app-layout\:toolbar {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+.hzd\:app-layout\:drawer {
+    grid-column: 1/3;
+    grid-row: 3;
+    @extend .k-h-full;
+    margin-left: 1em;
+    overflow: hidden;
+}
+
+.hzd\:app-layout\:buttons {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    margin-left: 1em;
+}

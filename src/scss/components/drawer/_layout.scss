@@ -1,0 +1,36 @@
+.hzd\:app-layout\:drawer\:content {
+
+    //@overwrite
+    .k-drawer-wrapper {
+        scrollbar-color: inherit;
+        scrollbar-width: auto;
+    }
+
+    .k-drawer-start {
+        .k-treeview {
+            white-space: unset;
+            word-break: break-all;
+            @extend .k-w-full;
+        }
+    }
+
+    .k-drawer-content {
+        @extend .k-h-full;
+        overflow: initial;
+
+        .k-splitter {
+            @extend .k-h-full;
+
+            [data-translate][data-total] {
+                @extend .k-max-h-0;
+            }
+        }
+    }
+
+    &.k-drawer-expanded {
+        .k-drawer-content {
+            width: 84vw;
+        }
+    }
+}
+

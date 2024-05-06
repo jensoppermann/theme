@@ -1,0 +1,53 @@
+/* wasm/Shared/Components/DataFilter.razor.rz.scp.css */
+.hzd\:dialog\:data-filter\:body {
+    @extend .k-d-grid;
+    @extend .k-gap-2\.5;
+    @extend .k-pb-2\.5;
+    grid-template-columns: 18px 70px minmax(100px, 1fr) minmax(150px, 1fr) minmax(180px, 1fr) 50px 70px 110px;
+}
+
+.cell-01[b-4liyv1o8va] {
+    justify-self: center; // k-justify-self-center
+    align-self: center; // k-align-self-center
+}
+
+.cell-02[b-4liyv1o8va] {
+    justify-self: center; // k-justify-self-center
+    align-self: start; // k-align-self-start
+}
+
+.cell-03[b-4liyv1o8va] {
+    justify-self: stretch; // k-justify-self-stretch
+    align-self: start; // k-align-self-start
+}
+
+.cell-04[b-4liyv1o8va] {
+    justify-self: stretch; // k-justify-self-stretch
+    align-self: start; // k-align-self-stretch
+}
+
+.cell-05[b-4liyv1o8va] {
+    padding: 0;
+    justify-self: stretch; // k-justify-self-stretch
+    align-self: start; // k-align-self-stretch
+}
+
+.cell-06[b-4liyv1o8va] {
+    justify-self: stretch; // k-justify-self-stretch
+    align-self: start; // k-align-self-stretch
+}
+
+.cell-07[b-4liyv1o8va] {
+    justify-self: stretch;
+    align-self: start;
+}
+
+.cell-08[b-4liyv1o8va] {
+    justify-self: stretch;
+    align-self: start;
+}
+
+.Heading[b-4liyv1o8va] {
+    padding: 0; // 
+}
+

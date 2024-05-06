@@ -1,0 +1,34 @@
+
+/// Konvertiert einen Hexadezimalfarbcode und einen Alpha-Wert in einen CSS-kompatiblen RGBA-Farbwert.
+/// @function hzd-hex-to-rgba
+/// @param {Color} $color - Der Hexadezimalfarbcode (z.B. #9C9C9C), der die RGB-Komponenten der Farbe definiert.
+/// @param {Number} $alpha - Der Alpha-Wert für die Transparenz der Farbe, der zwischen 0 (vollständig transparent) und 1 (vollständig opak) liegen muss.
+/// @return {String} - Ein CSS-kompatibler RGBA-Farbwert als String, wenn die Eingabeparameter gültig sind; andernfalls null oder eine Warnung, wenn der Alpha-Wert ungültig ist.
+/// @example
+///   // Verwendung der Funktion:
+///   .element {
+///     color: hzd-hex-to-rgba(#9C9C9C, 0.7); // Ergebnis: color: rgba(156, 156, 156, 0.7);
+///   }
+///
+///   // Ungültiger Alpha-Wert:
+///   .element {
+///     color: hzd-hex-to-rgba(#9C9C9C, 1.5); // Warnung: Alpha-Wert muss zwischen 0 und 1 liegen.
+///   }
+@function hzd-hex-to-rgba($color, $alpha: 1) {
+    @if $color {
+        // Extrahiere Rot, Grün, und Blau aus dem Hexadezimalcode
+        $r: red($color);
+        $g: green($color);
+        $b: blue($color);
+
+        // Überprüfe ob der Alpha-Wert zwischen 0 und 1 liegt
+        @if $alpha >= 0 and $alpha <= 1 {
+            // Gibt die RGBA-Werte zurück
+            @return rgba($r, $g, $b, $alpha);
+        } @else {
+            @return rgba($r, $g, $b, 1); // Standard-Alpha-Wert als Fallback
+        }
+    } @else {
+        @return null;
+    }
+}

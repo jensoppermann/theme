@@ -1,0 +1,19 @@
+.hzd\:app-layout\:drawer\:content\:left-tree-nav {
+    @extend .k-d-flex;
+    @extend .k-flex-col;
+    @extend .k-h-full;
+    @extend .k-pr-4;
+    @extend .k-pb-24;
+    .k-treeview-item {
+        &:hover {
+            @extend .k-cursor-pointer;
+        }
+    }
+
+    .k-treeview-leaf {
+        @extend .k-w-full;
+        @extend .k-border-b;
+        @extend .k-border-r-solid;
+        border-color: $kendo-base-border;
+    }    
+}

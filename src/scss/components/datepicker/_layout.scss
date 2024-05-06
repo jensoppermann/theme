@@ -1,0 +1,6 @@
+/* für den Datepicker, der ein Nullable DateTime hat
+    Workaround gemäß https://feedback.telerik.com/blazor/1582282-datepicker-should-accept-null-value-as-valid-when-bound-to-nullable-datetime  
+*/
+.k-input.k-invalid.valid-null {
+    border-color: $kendo-base-border;
+}

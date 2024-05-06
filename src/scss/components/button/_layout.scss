@@ -1,0 +1,63 @@
+//@overwrite
+.k-button {
+    //@extend .\!k-border-inherit;
+}
+
+.hzd\:app-layout\:drawer\:content\:left-tree-nav {
+    //@overwrite
+    .k-button {
+        @extend .k-input-solid;
+        @extend .k-border-l-0;
+        @extend .k-border-r-0;
+        @extend .k-border-t-0;
+        @extend .\!k-rounded-b-0;
+        @extend .\!k-rounded-tl-0;
+        @extend .\!k-rounded-bl-0;
+        @extend .k-h-10;
+    }
+}
+
+.hzd\:app-layout\:drawer\:content\:data-filter {
+    //@overwrite
+    .k-button {
+        @extend .k-button-square;
+        @extend .k-ml--1px;
+
+        &:not(:last-child) {
+            @extend .\!k-rounded-0;
+        }
+
+        &:nth-last-child(2),
+        &:last-child {
+            @extend .k-input-outline;
+        }
+
+        &:last-child {
+            @extend .\!k-rounded-tl-0;
+            @extend .\!k-rounded-bl-0;
+        }
+    }
+}
+
+.hzd\:app-layout\:toolbar\:split-button {
+    //@overwrite
+    .k-button {
+        &:first-child {
+            @extend .\!k-rounded-tr-0;
+            @extend .\!k-rounded-br-0;
+        }
+
+        &:last-child {
+            @extend .\!k-rounded-tl-0;
+            @extend .\!k-rounded-bl-0;
+            @extend .k-border-l-0;
+        }
+    }
+}
+
+.hzd\:app-layout\:drawer\:content\:selection-mask {
+    .k-pager-numbers-wrap > .k-button svg  {
+        @extend .\!k-w-6;
+        @extend .\!k-h-6;
+    }
+}

@@ -1,0 +1,40 @@
+/* Handle errors in ASP.NET Core Blazor apps
+** https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/handle-errors?view=aspnetcore-8.0
+*/
+#blazor-error-ui {
+    background-color: k-map-get( $kendo-palette-yellow, 1 );
+    box-shadow: 0 -1px 2px k-map-get( $kendo-palette-gray, 3 );
+    z-index: 1000;
+    @extend .k-d-none;
+    @extend .k-bottom-0;
+    @extend .k-left-0;
+    @extend .k-pt-2\.5;
+    @extend .k-pr-5;
+    @extend .k-pb-2\.5;
+    @extend .k-pl-5;
+    @extend .k-fixed;
+    @extend .k-w-full;
+}
+
+#blazor-error-ui .dismiss {
+    @extend .k-cursor-pointer;
+    @extend .k-pos-absolute;
+    @extend .k-right-3;
+    @extend .k-top-2;
+}
+
+/* Monaco - The Editor of the Web
+** https://microsoft.github.io/monaco-editor/
+*/
+.monaco-editor-container {
+    height: 500px;
+    border: 1px solid k-map-get( $kendo-palette-gray, 9 );
+}
+
+.decorationGlyphMarginClass {
+    background: k-map-get( $kendo-palette-red, 9 );
+}
+
+.decorationContentClass {
+    background: k-map-get( $kendo-palette-blue, 3 );
+}

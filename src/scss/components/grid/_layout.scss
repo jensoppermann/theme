@@ -1,0 +1,34 @@
+.hzd\:app-layout\:drawer\:content\:selection-mask {
+    @extend .k-d-flex;
+    @extend .k-flex-col;
+    @extend .k-h-full;
+
+    .k-table-td:not(:has(> span)):hover {
+        cursor: pointer;
+    }
+}
+
+/* Spezifischer Fall: Anwenden der angepassten Höhe, wenn innerhalb eines Dialogs */
+[role="dialog"] .hzd\:app-layout\:drawer\:content\:selection-mask {
+    height: calc(100% - 160px);
+
+    .k-table-td:not(:has(> span)):hover {
+        cursor: auto;
+    }
+}
+
+.hzd\:app-layout\:drawer\:content\:grid\:no-scroll {
+    @extend .k-overflow-y-auto;
+
+    .k-grid-content {
+        @extend .k-overflow-y-auto;
+    }
+
+    .k-grid-header, .k-grid-footer {
+        @extend .k-pr-0;
+    }
+
+    .k-grid-header-wrap, .k-grid-footer-wrap {
+        @extend .k-border-r-0;
+    }
+}

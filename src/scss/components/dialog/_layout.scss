@@ -1,0 +1,13 @@
+.hzd\:dialog {
+    @extend .k-d-flex;
+    @extend .k-flex-column;
+    @extend .k-gap-4;
+    @extend .k-h-full;
+}
+
+.hzd\:dialog\:button-row {
+    @extend .k-d-flex;
+    @extend .k-justify-content-end;
+    @extend .k-gap-4;
+    @extend .k-pb-2;
+}

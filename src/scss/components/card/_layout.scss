@@ -1,0 +1,17 @@
+.hzd\:app-layout\:login {
+    @extend .k-text-center;
+    @extend .k-mt-15;
+
+    .k-grid-layout {
+        @extend .k-gap-y-2\.5;
+    }
+
+    .k-floating-label-container {
+        text-indent: k-map-get( $kendo-spacing, 5 );
+    }
+
+    .k-form-error.k-invalid-msg {
+        text-indent: k-map-get( $kendo-spacing, 9 );
+    }
+
+}

@@ -1,0 +1,20 @@
+.hzd\:app-layout\:drawer\:content\:splitter {
+    @extend .k-flex-auto;
+    @extend .k-border-l-0;
+
+    //@overwrite
+    .k-splitbar-horizontal,
+    .k-splitbar .k-icon-xs {
+        @extend .\!k-w-6\.5;
+    }
+
+    .k-splitbar-vertical,
+    .k-splitbar .k-icon-xs {
+        @extend .\!k-h-6\.5;
+    }
+
+    .k-splitbar-draggable-vertical .k-resize-handle,
+    .k-splitbar-draggable-horizontal .k-resize-handle {
+        @extend .k-d-none;
+    }
+}
